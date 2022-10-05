@@ -7,17 +7,13 @@ const styles = {
     justifyContent: 'center',
     
   },
-  title: {
-    fontWeight: 500,
-    fontSize: 48,
-    textAlign: 'center',
-  },
+  
 };
 
 export default function RegisterPage() {
   return (
     <div style={styles.container} >
-      <title>Registration</title>
+      
       <RegisterForm />
     </div>
   );
