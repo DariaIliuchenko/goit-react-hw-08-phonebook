@@ -15,13 +15,13 @@ export default function ContactList() {
             ? contact.name.toLowerCase().includes(filter.toLowerCase())
             : true;
         })
-        .map(({ id, name, phone }) => {
+        .map(({ id, name, number }) => {
           return (
             <li className={s.item} key={id}>
             <ContactListItem
             id={id}
             name={name}
-            phone={phone}
+            number={number}
             
             />
             </li>
