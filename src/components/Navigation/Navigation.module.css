@@ -8,9 +8,14 @@
 .link:hover {
   color: #e84a5f;
 }
-.link.active {
+.active {
+  display: inline-block;
+  text-decoration: none;
+
+  font-weight: 700;
   color: #e84a5f;
 }
+
 nav {
   display: flex;
   gap: 20px;
