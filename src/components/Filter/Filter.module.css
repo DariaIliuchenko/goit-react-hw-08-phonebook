@@ -1,13 +1,18 @@
 .filter {
   padding: 20px;
   margin: 20px;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .filterLabel {
   padding: 20px;
   margin: 20px;
 }
 .filterInput {
-  height: 25px;
+  height: 42px;
+  border-radius: 10px;
+  font-size: 20px;
 }

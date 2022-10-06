@@ -11,7 +11,7 @@ export default function ContactListItem({ name, number, id }) {
             <p className={s.contact}>{name}: {number} </p>
             <button 
             id={id}
-            className={s.deleteBtn}
+            className={s.btn}
             type="button"
             onClick={() => dispatch(deleteContact(id))}>
               Delete
