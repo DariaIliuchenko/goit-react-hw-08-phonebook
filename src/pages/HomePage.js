@@ -6,7 +6,7 @@ export default function HomePage() {
   const isLoggedIn = useSelector(selectIsLoggedIn);
   
     return (
-    <>
+    <div >
       {isLoggedIn ? (
         <div >
           <h1 >Welcome to the Phonebook</h1>
@@ -24,6 +24,6 @@ export default function HomePage() {
           </p>
         </div>
       )}
-    </>
+    </div>
   );
 }

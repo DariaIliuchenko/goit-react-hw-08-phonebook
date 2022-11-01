@@ -6,7 +6,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { selectContacts, selectIsLoading, selectError } from 'redux/selectors';
 import { fetchContacts } from 'redux/operations';
 import {Loader} from 'components/Loader/Loader';
-
+import Container from 'components/Container/Container';
 export default function ContactsPage() {
   const dispatch = useDispatch();
   const contacts = useSelector(selectContacts);
@@ -21,7 +21,7 @@ export default function ContactsPage() {
     <div    
     >
       <h1 >Contacts</h1>
-      <div>
+      <Container>
         <ContactForm />
         {error && <h2>Error...</h2>}
         {isLoading && <Loader />}
@@ -33,7 +33,7 @@ export default function ContactsPage() {
         ) : (
           <h2>You have not added contacts yet.</h2>
         )}
-      </div>
+      </Container>
     </div>
   );
 }
