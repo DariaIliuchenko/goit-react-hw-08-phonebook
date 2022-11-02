@@ -3,7 +3,8 @@ header {
   justify-content: space-between;
   align-items: center;
   border-bottom: 2px solid transparent;
-  padding-bottom: 20px;
+  padding: 20px;
+
   border-image: linear-gradient(
     0.25turn,
     rgba(255, 249, 34),
@@ -11,5 +12,6 @@ header {
     rgba(56, 2, 155, 0)
   );
   border-image-slice: 1;
-  width: 100%;
+  /* width: 100%; */
+  background-color: rgba(118, 119, 121, 0.368);
 }

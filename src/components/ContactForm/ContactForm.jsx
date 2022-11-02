@@ -7,7 +7,8 @@ import { useSelector } from 'react-redux';
 import { selectContacts } from '../../redux/selectors';
 import Notiflix from 'notiflix';
 
-export default function ContactForm() {
+import PropTypes from 'prop-types';
+export default function ContactForm({ closeModal }) {
   const contacts = useSelector(selectContacts);
   const dispatch = useDispatch();
   const [name, setName] = useState('');
@@ -39,32 +40,33 @@ export default function ContactForm() {
       )
     ) {
       return Notiflix.Notify.failure(`${name} is already in contacts`);
-      
     }
 
     const newContact = { id: nanoid(), name, number };
     dispatch(addContact(newContact));
     reset();
+    closeModal();
   };
-  
 
   return (
     <form className={s.form} onSubmit={handleSubmit}>
-      <label className={s.label}>
-        Name
+      <div className={s.wrap}>
+        <label className={s.label} for="name">
+          Name
+        </label>
         <input
           className={s.input}
+          name="name"
           onChange={handleChange}
           value={name}
           type="text"
-          name="name"
           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
           required
         />
-      </label>
-      <label className={s.label}>
-        Phone
+      </div>
+      <div className={s.wrap}>
+        <label className={s.label}>Phone</label>
         <input
           className={s.input}
           onChange={handleChange}
@@ -75,12 +77,14 @@ export default function ContactForm() {
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required
         />
-      </label>
-      <button type="submit" className={s.btn}>
+      </div>
+
+      <button variant="contained" type="submit" className={s.btn}>
         Add contact
       </button>
     </form>
   );
 }
-
-
+ContactForm.propTypes = {
+  closeModal: PropTypes.func,
+};

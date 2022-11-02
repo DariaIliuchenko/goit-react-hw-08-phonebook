@@ -1,0 +1,7 @@
+.wrapper {
+  background-color: rgba(61, 60, 59, 0.295);
+  background: url('../../assets/img/background2.jpg') center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}

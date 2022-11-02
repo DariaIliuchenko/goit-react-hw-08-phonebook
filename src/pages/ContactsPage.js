@@ -5,8 +5,9 @@ import Filter from 'components/Filter/Filter';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectContacts, selectIsLoading, selectError } from 'redux/selectors';
 import { fetchContacts } from 'redux/operations';
-import {Loader} from 'components/Loader/Loader';
+import { Loader } from 'components/Loader/Loader';
 import Container from 'components/Container/Container';
+import ModalEl from '../components/ModalEl/ModalEl';
 export default function ContactsPage() {
   const dispatch = useDispatch();
   const contacts = useSelector(selectContacts);
@@ -18,22 +19,26 @@ export default function ContactsPage() {
   }, [dispatch]);
 
   return (
-    <div    
-    >
-      <h1 >Contacts</h1>
+    <>
       <Container>
-        <ContactForm />
+        <h1>Contacts</h1>
+
+        <ModalEl>
+          <ContactForm />
+        </ModalEl>
+
         {error && <h2>Error...</h2>}
         {isLoading && <Loader />}
         {contacts.length > 0 ? (
-          <div >
+          <div>
             <Filter name="filter" />
             <ContactList />
           </div>
         ) : (
           <h2>You have not added contacts yet.</h2>
         )}
+
       </Container>
-    </div>
+    </>
   );
 }

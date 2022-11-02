@@ -5,10 +5,10 @@ import { selectIsRefreshing} from '../redux/auth/authSelectors';
 import { refreshUser } from 'redux/auth/authOperations';
 import { Routes, Route} from 'react-router-dom';
 import { Layout } from './Layout/Layout';
-import  Container  from './Container/Container';
+
 import { PrivateRoute } from './HOCs/PrivateRoute';
 import { PublicRoute } from './HOCs/PublicRoute';
-import  HomePage  from '../pages/HomePage';
+import  HomePage  from '../pages/HomePage/HomePage';
 import  ContactsPage  from '../pages/ContactsPage';
 import  LoginPage  from '../pages/LoginPage';
 import  RegisterPage  from '../pages/RegisterPage';
@@ -24,7 +24,7 @@ const App = () => {
 
   
   return (
-    <Container>
+    <>
       {isFetchingCurrentUser ? (
         <Loader />
       ) : (
@@ -69,7 +69,7 @@ const App = () => {
           
         </>
       )}
-    </Container>
+    </>
 
     
   );

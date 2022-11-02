@@ -13,6 +13,7 @@ export default function Filter() {
   };
     return (
       <div className={s.filter}>
+        
         Find contacts by name
         <label className={s.filterLabel}>
           <input 

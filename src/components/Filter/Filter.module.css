@@ -1,6 +1,6 @@
 .filter {
   padding: 20px;
-  margin: 20px;
+  margin-right: 20px;
   font-size: 20px;
   font-weight: 500;
   display: flex;
@@ -12,7 +12,21 @@
   margin: 20px;
 }
 .filterInput {
-  height: 42px;
-  border-radius: 10px;
-  font-size: 20px;
+  display: block;
+  width: 280px;
+  height: 20px;
+  outline: none;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: transparent;
+  background-clip: padding-box;
+  border: none;
+  border-bottom: 1px solid rgb(163, 161, 161);
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }

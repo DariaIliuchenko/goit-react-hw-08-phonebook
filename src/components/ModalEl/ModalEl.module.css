@@ -1,9 +1,9 @@
-.btn {
+.button {
   background-image: linear-gradient(
     to right,
-    #3e3d3d 0%,
-    #868484 51%,
-    #d31010 100%
+    #00bf8f 0%,
+    #001510 51%,
+    #00bf8f 100%
   );
   margin: 10px;
   padding: 15px 45px;
@@ -11,27 +11,24 @@
   text-transform: uppercase;
   transition: 0.5s;
   background-size: 200% auto;
-  color: white;
-
+  box-shadow: 0 0 20px #eee;
   border-radius: 10px;
   border: none;
   cursor: pointer;
+  color: #eee;
 }
-
-.btn:hover {
+.button:hover {
   background-position: right center; /* change the direction of the change here */
   color: #fff;
   text-decoration: none;
-  box-shadow: 0 0 20px #eee;
 }
-
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-.text {
-  font-size: 20px;
-  color: #fff;
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400;
+  background-color: #fff;
+  border: 2px solid #000;
+  box-shadow: 24;
 }

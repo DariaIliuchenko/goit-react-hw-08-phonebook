@@ -1,18 +1,13 @@
 .link {
   display: inline-block;
   text-decoration: none;
+  font-size: 20px;
+  cursor: pointer;
 
   font-weight: 700;
   color: #000000;
 }
 .link:hover {
-  color: #e84a5f;
-}
-.active {
-  display: inline-block;
-  text-decoration: none;
-
-  font-weight: 700;
   color: #e84a5f;
 }
 
