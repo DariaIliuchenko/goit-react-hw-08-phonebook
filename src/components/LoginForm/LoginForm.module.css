@@ -1,29 +1,28 @@
 .label {
   display: flex;
   flex-direction: column;
-  margin-bottom: 16px;
-  color: #010101;
-  font-size: 26px;
-  font-weight: 500;
+  align-items: flex-start;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.04em;
+  color: #00151094;
 }
 .form {
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
-
-  padding: 30px;
-  width: 300px;
-  box-shadow: 0 1px 4px 0 rgba(89, 90, 87, 0.29);
-  border-radius: 4px;
+  justify-content: center;
+  gap: 20px;
 }
 
 .btn {
   background-image: linear-gradient(
     to right,
-    #e55d87 0%,
-    #5fc3e4 51%,
-    #e55d87 100%
+    #edc368 0%,
+    #b0b1b1 51%,
+    #529864 100%
   );
   margin: 10px;
   padding: 15px 45px;
@@ -32,7 +31,8 @@
   transition: 0.5s;
   background-size: 200% auto;
   color: white;
-  box-shadow: 0 0 20px #eee;
+
+  border: none;
   border-radius: 10px;
   display: block;
   cursor: pointer;
@@ -42,15 +42,25 @@
   background-position: right center; /* change the direction of the change here */
   color: #fff;
   text-decoration: none;
+  box-shadow: 0 0 20px #eee;
 }
 
 .input {
-  width: 300px;
-  height: 40px;
-  margin-bottom: 10px;
-  margin-top: 10px;
-  border: 1px solid rgb(86, 88, 86);
-  border-radius: 4px;
-  background-color: inherit;
-  font-size: 25px;
+  display: block;
+  width: 280px;
+  height: 20px;
+  outline: none;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: transparent;
+  background-clip: padding-box;
+  border: none;
+  border-bottom: 1px solid rgb(163, 161, 161);
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
